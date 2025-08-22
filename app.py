@@ -18,3 +18,7 @@ app = FastAPI(lifespan=lifespan, debug=False)
 @app.get("/main")
 async def main():
     return JSONResponse(status_code=200, content={"message": "OK"})
+
+@app.get("/home")
+async def home():
+    return JSONResponse(status_code=200, content={"page_title": "home"})
