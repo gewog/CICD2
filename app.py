@@ -12,7 +12,7 @@ async def lifespan(app: FastAPI):
     print(f"Приложение проработало {time.time()-start}")
 
 
-app = FastAPI(lifespan=lifespan, debug=True)
+app = FastAPI(lifespan=lifespan, debug=False)
 
 
 @app.get("/main")
