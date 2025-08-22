@@ -2,16 +2,16 @@ name: FastAPI CI/CD
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
   pull_request:
-    branches: [ main ]
+    branches: [ master ]
 
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/check-out@v4
+        uses: actions/checkout@v4
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -31,7 +31,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/check-out@v4
+        uses: actions/checkout@v4
 
       - name: Build Docker image
         run: |
