@@ -36,4 +36,4 @@ jobs:
       - name: Build Docker image
         run: |
           docker build -t my-fastapi-image:latest .
-          echo "✅ Docker image built successfully"
+          echo "✅ Docker image built successfully!"
