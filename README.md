@@ -148,6 +148,7 @@ On every git push or pull request to the master branch:
 4. Docker image is built
 
 ✅ Example Output
+
 $ curl http://localhost:8000/main
 {"message": "OK"}
 
