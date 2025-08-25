@@ -77,6 +77,7 @@ docker run -p 8000:8000 my-fastapi-image:latest
 
 $ curl http://localhost:8000/main
 {"message": "OK"}
+
 $ curl http://localhost:8000/home
 {"page_title": "home"}
 
@@ -147,8 +148,9 @@ On every git push or pull request to the master branch:
 4. Docker image is built
 
 ✅ Example Output
- Copy$ curl http://localhost:8000/main
+$ curl http://localhost:8000/main
 {"message": "OK"}
+
 $ curl http://localhost:8000/home
 {"page_title": "home"}
 
