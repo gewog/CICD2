@@ -1,6 +1,6 @@
 """
-Модуль для тестирования FastAPI-приложения.
-Содержит асинхронные и синхронные тесты для эндпоинтов.
+Module for testing the FastAPI application.
+Contains asynchronous and synchronous tests for API endpoints.
 """
 
 import pytest
@@ -16,16 +16,16 @@ client = TestClient(app=app)
 @pytest.mark.asyncio
 async def test_main() -> None:
     """
-    Асинхронный тест для проверки работы эндпоинта `/main`.
+    Asynchronous test for the `/main` endpoint.
 
-    Использует `AsyncClient` для выполнения асинхронного запроса к FastAPI-приложению.
-    Проверяет, что ответ содержит ожидаемое сообщение.
+    Uses `AsyncClient` to perform an asynchronous request to the FastAPI application.
+    Verifies that the response contains the expected message.
 
     Returns:
-        None: Тест не возвращает значения, но проверяет утверждения.
+        None: The test does not return a value but checks assertions.
 
     Raises:
-        AssertionError: Если ответ не соответствует ожидаемому.
+        AssertionError: If the response does not match the expected result.
     """
     async with AsyncClient(
         transport=ASGITransport(app=app), base_url="http://test"
@@ -35,20 +35,20 @@ async def test_main() -> None:
 
 
 @pytest.mark.skip(
-    reason="Тест временно отключен. Используется для демонстрации синхронного подхода."
+    reason="Test temporarily disabled. Used for synchronous approach demonstration."
 )
 def test_main_2() -> None:
     """
-    Синхронный тест для проверки работы эндпоинта `/main`.
+    Synchronous test for the `/main` endpoint.
 
-    Использует `TestClient` для выполнения синхронного запроса к FastAPI-приложению.
-    Проверяет, что статус-код ответа равен 200.
+    Uses `TestClient` to perform a synchronous request to the FastAPI application.
+    Verifies that the response status code is 200.
 
     Returns:
-        None: Тест не возвращает значения, но проверяет утверждения.
+        None: The test does not return a value but checks assertions.
 
     Raises:
-        AssertionError: Если статус-код ответа не равен 200.
+        AssertionError: If the response status code is not 200.
     """
     response = client.get("/main")
     assert response.status_code == 200
