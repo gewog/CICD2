@@ -156,3 +156,9 @@ $ curl http://localhost:8000/home
 📝 Author
 gewog
 📧 gewoggewog@gmail.com
+
+
+
+<div align="center">
+  <img src="https://media.tenor.com/u-c_vbY40GMAAAAi/loof-and-timmy-cute-bread.gif" alt="Demo of SmartAdBot" width="200" />
+</div>
